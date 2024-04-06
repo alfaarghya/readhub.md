@@ -1,7 +1,11 @@
-export default function Home() {
+import React from "react";
+
+const home = () => {
   return (
-    <>
-      <h1>ReadHub.md</h1>
-    </>
+    <div>
+      <div>ReadHub.md hii</div>
+    </div>
   );
-}
+};
+
+export default home;
