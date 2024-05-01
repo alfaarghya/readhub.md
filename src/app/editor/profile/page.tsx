@@ -1,7 +1,11 @@
-import React from "react";
+import HomePage from "@/components/profile-readme/slides/HomePage";
 
 const profile = () => {
-  return <div>edit profile readme</div>;
+  return (
+    <>
+      <HomePage />
+    </>
+  );
 };
 
 export default profile;
