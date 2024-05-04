@@ -1,12 +1,13 @@
-import { Typewriter } from "../ui/Typewriter";
+"use client";
+
+import { RecoilRoot, useRecoilValue } from "recoil";
 import UserNameInput from "../ui/UserNameInput";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen overflow-hidden">
-      <Typewriter />
+    <RecoilRoot>
       <UserNameInput />
-    </div>
+    </RecoilRoot>
   );
 };
 
