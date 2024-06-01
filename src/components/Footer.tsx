@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import "remixicon/fonts/remixicon.css";
 
 const Footer = () => {
   return (
@@ -19,7 +20,12 @@ const Footer = () => {
         </Link>
       </div>
       <div>
-        <h5> code by alfaarghya </h5>
+        <h5>
+          {" "}
+          code with{" "}
+          <i className="ri-heart-3-fill animate-pulse  hover:text-[#7ec9ec]"></i>{" "}
+          by <span className="hover:text-[#d6eaff]">alfaarghya</span>{" "}
+        </h5>
       </div>
     </div>
   );

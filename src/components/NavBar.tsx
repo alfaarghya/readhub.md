@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import "remixicon/fonts/remixicon.css";
 
 const NavBar = () => {
   return (

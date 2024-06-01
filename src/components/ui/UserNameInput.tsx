@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 import { useRecoilState, useRecoilValue } from "recoil";
 import Username from "../elements/Username";
-import { isNextAtom, usernameAtom } from "@/store/atoms";
+import { usernameAtom } from "@/store/atoms";
 import { useState } from "react";
 import ToastError from "../elements/toaster/ToastError";
 import { Typewriter } from "./Typewriter";
-import About from "../slides/About";
+import { useObserver } from "mobx-react";
+import Social from "../slides/Social";
 
 const UserNameInput = () => {
   const userName = useRecoilValue(usernameAtom);
@@ -17,8 +18,6 @@ const UserNameInput = () => {
   const onNext = () => {
     if (userName != "" && userName.replace(/ /g, "") != "") {
       setIsNext(true);
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     } else {
       if (alert !== true) {
         setAlert(true);
@@ -40,10 +39,10 @@ const UserNameInput = () => {
       },
     },
   };
-  return (
+  return useObserver(() => (
     <>
       {isNext ? (
-        <About />
+        <Social back={() => setIsNext(false)} />
       ) : (
         <div className="flex flex-col items-center justify-center overflow-hidden">
           <Typewriter />
@@ -66,9 +65,7 @@ const UserNameInput = () => {
         </div>
       )}
     </>
-  );
+  ));
 };
-
-const Temp = () => {};
 
 export default UserNameInput;

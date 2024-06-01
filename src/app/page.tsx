@@ -1,9 +1,10 @@
+import HomePage from "@/components/slides/HomePage";
 import React from "react";
 
 const home = () => {
   return (
     <div>
-      <div>ReadHub.md hii</div>
+      <HomePage />
     </div>
   );
 };

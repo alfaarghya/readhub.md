@@ -1,7 +1,8 @@
 "use client";
 
-import { RecoilRoot, useRecoilValue } from "recoil";
+import { RecoilRoot } from "recoil";
 import UserNameInput from "../ui/UserNameInput";
+import Preview from "./Generate";
 
 const HomePage = () => {
   return (
